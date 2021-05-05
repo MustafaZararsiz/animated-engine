@@ -1,0 +1,29 @@
+
+public class Kampus {
+    public static void main(String[] args) {
+        // okul ve ogrenci siniflari olan bir yapi tasarlayin
+        okul uni = new okul();
+        uni.name = "CIU";
+        uni.address = "Cyprus";
+        uni.principal = "Omar";
+        uni.fees = 20000;
+
+        Ogrenci student1 = new Ogrenci();
+        student1.id = 21801858;
+        student1.name = "Kirsyy";
+        student1.surname = "Yousef";
+        student1.okulu = uni;
+
+        System.out.println("student1 uni name: "+student1.okulu.name);
+        System.out.println("student1 principal: " + student1.okulu.principal);
+
+
+        Ogrenci student2= new Ogrenci();
+        student2.okulu = new okul();
+        student2.id = 21801856;
+        student2.name = "Mehmet";
+        student2.surname = "Simsek";
+        student2.okulu.principal = "Yousef"; // define new principal for student2
+        System.out.println("student2 principal: "+student2.okulu.principal);
+}
+}
